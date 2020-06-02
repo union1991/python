@@ -1,3 +1,5 @@
+# 시험 평균 점수 구하기
+ 
 sum = int(0)
 
 for i in range(5) :
