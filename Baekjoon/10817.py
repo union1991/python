@@ -19,4 +19,18 @@ else :
     else :
         print(b)
 
+        
+        
+ '''
+ 다른 사람 코드
+ 
+ a,b,c = map(int, input().split())
+ 
+ M = max(a,b,c)
+ N = min(a,b,c)
+ 
+ print(a + b + c -N -M)
+
+ '''
+
 
