@@ -1,6 +1,8 @@
 # 사용된 숫자 개수
 
-a, b, c = map(int, input().split())
+a = int(input())
+b = int(input())
+c = int(input())
 mult = a * b * c
 mult = str(mult)
 
