@@ -12,3 +12,14 @@ for i in range(10):
         n = n + 1
 
 print(n)
+
+
+### 다른 사람 코드
+'''
+num_list = []
+for _ in range(10):
+    num = int(input())
+    num_list.append(num % 42)
+num_list = set(num_list)    // 'set' 중복된 값을 제외해준다.
+print(len(num_list))
+'''
