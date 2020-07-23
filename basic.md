@@ -23,7 +23,7 @@ list1 = list(input())
 ```
 list1={}
 list2 = ["a","a","b","b","b","c"]
-for i in lists:
+for i in list2:
     try: list1[i] += 1
     except: list1[i]=1
 print(list1)
