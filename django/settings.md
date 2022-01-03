@@ -7,7 +7,7 @@
 #### Django 단점 : 인터프리터 언어의 단점
 
 
-## Django Settings
+## Django 설정
 
 #### 1. Python 설치
 
