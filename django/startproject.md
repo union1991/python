@@ -38,7 +38,7 @@ $ python3 manage.py runserver
 ![image](https://user-images.githubusercontent.com/56064985/148042103-e89dec0c-5cdc-4a7a-896a-2c8e32264b10.png)
 
 
-#### Error 발생 시
+### Error 발생 시
 
 runser 명령어 입력 시, ```django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).``` 발생
 
