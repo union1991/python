@@ -14,9 +14,9 @@ $ django-admin startproject mysite
 ![image](https://user-images.githubusercontent.com/56064985/148037481-817adf43-67a8-4bd1-9559-779571978d97.png)
 
 
-* manage.py: 커맨드라인의 유틸리티
+* ```manage.py``` : 커맨드라인의 유틸리티
 
-* mysite/ : 프로젝트를 위한 실제 Python 패키지들이 저장
+* ```mysite/``` : 프로젝트를 위한 실제 Python 패키지들이 저장
 
 * mysite/__init__.py: Python으로 하여금 이 디렉토리를 패키지처럼 다루라고 알려주는 용도의 단순한 빈 파일 
 
