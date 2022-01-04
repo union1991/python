@@ -48,7 +48,7 @@ runserver 명령어 입력 시, ```django.core.exceptions.ImproperlyConfigured: 
 ![image](https://user-images.githubusercontent.com/56064985/148043499-5b75d824-cda8-4097-9e37-0e73b3164be9.png)
 
 
-![image](https://user-images.githubusercontent.com/56064985/148043644-78e26f31-2c45-496f-b0bc-1e7c59cdfb04.png)
+![image](https://user-images.githubusercontent.com/56064985/148043678-ddce2c0f-f847-4beb-ba9f-6c3c06b31b94.png)
 
 
 * sqlite3 최신 버전 설치
