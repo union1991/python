@@ -35,7 +35,12 @@ $ django-admin startproject mysite
 $ python3 manage.py runserver
 ```
 
+![image](https://user-images.githubusercontent.com/56064985/148042103-e89dec0c-5cdc-4a7a-896a-2c8e32264b10.png)
+
+
 #### Error 발생 시
+
+* sqlite3 최신 버전 설치
 
 ```
 $ wget https://www.sqlite.org/2019/sqlite-autoconf-3280000.tar.gz
@@ -44,9 +49,20 @@ $ sudo yum -y install gcc
 $ ./configure --prefix=/usr/local
 $ make
 $ sudo make install
-$ sudo -i
+```
+
+* 컴파일 후 시스템 링크 라이브러리에 반영
+
+```
+$ sudo -i           // 관리자 계정에서만 echo 명령어 가능
 # echo "/usr/local/lib" >> /etc/ld.so.conf
+# /sbin/ldconfig
 # exit
+```
+
+* 설치한 sqlite3 경로 설정
+
+```
 $ cd ~
 $ vi .bashrc
 
@@ -58,6 +74,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 $ source .bashrc
 ```
 
+* 참조 : https://ossian.tistory.com/109
 
 
 
