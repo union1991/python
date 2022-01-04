@@ -18,15 +18,15 @@ $ django-admin startproject mysite
 
 * ```mysite/``` : 프로젝트를 위한 실제 Python 패키지들이 저장
 
-* mysite/__init__.py: Python으로 하여금 이 디렉토리를 패키지처럼 다루라고 알려주는 용도의 단순한 빈 파일 
+* ```mysite/__init__.py```: Python으로 하여금 이 디렉토리를 패키지처럼 다루라고 알려주는 용도의 단순한 빈 파일 
 
-* mysite/settings.py: 프로젝트의 환경 및 구성을 저장(settings에서 환경 설정이 어떻게 동작하는지 확인 가능)
+* ```mysite/settings.py```: 프로젝트의 환경 및 구성을 저장(settings에서 환경 설정이 어떻게 동작하는지 확인 가능)
 
-* mysite/urls.py: project 의 URL 선언을 저장
+* ```mysite/urls.py```: project 의 URL 선언을 저장
 
-* mysite/asgi.py: An entry-point for ASGI-compatible web servers to serve your project. See ASGI를 사용하여 배포하는 방법 for more details.
+* ```mysite/asgi.py```: An entry-point for ASGI-compatible web servers to serve your project. See ASGI를 사용하여 배포하는 방법 for more details.
 
-* mysite/wsgi.py: 프로젝트를 서비스하기 위한 WSGI 호환 웹 서버의 진입점
+* ```mysite/wsgi.py```: 프로젝트를 서비스하기 위한 WSGI 호환 웹 서버의 진입점
 
 
 #### 2. runserver
