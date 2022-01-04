@@ -29,11 +29,36 @@ $ django-admin startproject mysite
 * mysite/wsgi.py: 프로젝트를 서비스하기 위한 WSGI 호환 웹 서버의 진입점
 
 
-#### 2. 장고 설치
+#### 2. runserver
 
 ```
-$ python3 -m pip install Django
-$ python3
->>> import django
->>> print(django.get_version())
+$ python3 manage.py runserver
 ```
+
+#### Error 발생 시
+
+```
+$ wget https://www.sqlite.org/2019/sqlite-autoconf-3280000.tar.gz
+$ tar zxvf sqlite-autoconf-3280000.tar.gz
+$ sudo yum -y install gcc
+$ ./configure --prefix=/usr/local
+$ make
+$ sudo make install
+$ sudo -i
+# echo "/usr/local/lib" >> /etc/ld.so.conf
+# exit
+$ cd ~
+$ vi .bashrc
+
+#SQLITE3 Setting
+export LD_LIBRARY_PATH=/usr/local/lib
+
+:wq!
+
+$ source .bashrc
+```
+
+
+
+
+
