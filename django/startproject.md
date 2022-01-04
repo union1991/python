@@ -40,6 +40,11 @@ $ python3 manage.py runserver
 
 #### Error 발생 시
 
+runser 명령어 입력 시, ```django.core.exceptions.ImproperlyConfigured: SQLite 3.8.3 or later is required (found 3.7.17).``` 발생
+
+django에서 요구하는 SQLite의 버전은 3.9.0 이상이지만, 설치되어 있는 SQLite 의 버전이 3.7.X 이기 때문에 이슈가 발생
+
+
 * sqlite3 최신 버전 설치
 
 ```
