@@ -86,7 +86,7 @@ $ source .bashrc
 
 #### 3. Creating the Polls app
 
-* Polls 프로젝트 
+1. Polls 프로젝트 
 
 ```
 $ python3 manage.py startapp polls
@@ -95,7 +95,7 @@ $ python3 manage.py startapp polls
 ![image](https://user-images.githubusercontent.com/56064985/148711093-196efb09-ba03-49a7-825b-696e0ce2c7b0.png)
 
 
-* View 작성
+2. View 작성
 
 ```
 $ vi ~/mysite/polls/views.py
@@ -112,7 +112,7 @@ def index(request):
 ![image](https://user-images.githubusercontent.com/56064985/148711630-3983b8b2-dfaa-45c4-bb69-0cd7c4cbfddf.png)
 
 
-* urls.py 생성
+3. urls.py 생성
 
 View를 호출하려면, URL 매핑이 되어야 하며, 이를 위해서는 URLconf가 필요합니다.
 
@@ -135,7 +135,7 @@ urlpatterns = [
 ![image](https://user-images.githubusercontent.com/56064985/148720186-d29dd6d5-1648-4424-8b45-ba095e611737.png)
 
 
-* polls.urls 생성
+4. polls.urls 생성
 
  polls.urls 모듈에서 루트 URLconf를 지정해야 합니다. 이에, mysite/urls.py 을 생성합니다.
 
