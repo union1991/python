@@ -55,6 +55,47 @@ class Choice(models.Model):
 
 #### 3. Model 활성화
 
+프로젝트에 앱을 포함하려면 INSTALLED_APPS설정 에서 구성 클래스에 대한 참조를 추가해야 합니다. PollsConfig클래스에 polls/apps.py의 경로가 있으므로, 파일 'polls.apps.PollsConfig'. mysite/settings.py파일을 편집하고 해당 경로를 INSTALLED_APPS설정에 추가 합니다.
+
+#### 1) settings.py 설정 삽입
+
+```
+$ vi ~/mysite/mysite/settings.py
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+STATIC_URL = '/static/'
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+ALLOWED_HOSTS = ['172.16.100.48','localhost','127.0.0.1', '172.16.101.185']
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+INSTALLED_APPS = [                                              // 삽입
+    'polls.apps.PollsConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+:wq!
+```
+
+#### 1) polls 포함 확인
+
+```
+$ python3 manage.py makemigrations polls
+```
+
+![image](https://user-images.githubusercontent.com/56064985/148728752-fb0017d5-2e39-402e-b7c4-f1b0c47411d3.png)
+
+
 
 
 
