@@ -93,9 +93,6 @@ INSTALLED_APPS = [                                              // 삽입
 $ python3 manage.py makemigrations polls
 ```
 
-![image](https://user-images.githubusercontent.com/56064985/148728752-fb0017d5-2e39-402e-b7c4-f1b0c47411d3.png)
-
-
-
+![image](https://user-images.githubusercontent.com/56064985/148728880-e0d33e8c-e798-421a-bd17-c190d3931694.png)
 
 
