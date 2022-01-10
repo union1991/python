@@ -130,4 +130,23 @@ urlpatterns = [
 :wq!
 ```
 
+![image](https://user-images.githubusercontent.com/56064985/148720186-d29dd6d5-1648-4424-8b45-ba095e611737.png)
 
+
+* polls.urls 생성
+
+ polls.urls 모듈에서 루트 URLconf를 지정해야 합니다. 이에, mysite/urls.py 을 생성합니다.
+
+```
+$ vi ~/mysite/urls.py
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+```
+
+![image](https://user-images.githubusercontent.com/56064985/148720204-bfdd0941-47a8-4217-9261-6db09c67cbfd.png)
