@@ -83,3 +83,31 @@ $ source .bashrc
 
 * 참조 : https://ossian.tistory.com/109
 
+
+#### 3. Creating the Polls app
+
+```
+$ python3 manage.py startapp polls
+```
+
+![image](https://user-images.githubusercontent.com/56064985/148711093-196efb09-ba03-49a7-825b-696e0ce2c7b0.png)
+
+```
+$ vi ~/mysite/polls/views.py
+
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+   
+:wq!
+```
+
+![image](https://user-images.githubusercontent.com/56064985/148711630-3983b8b2-dfaa-45c4-bb69-0cd7c4cbfddf.png)
+
+
+
+
+
+
