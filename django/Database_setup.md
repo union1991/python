@@ -74,7 +74,8 @@ ALLOWED_HOSTS = ['172.16.100.48','localhost','127.0.0.1', '172.16.101.185']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-INSTALLED_APPS = [                                              // 삽입
+// 삽입
+INSTALLED_APPS = [                                           
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
