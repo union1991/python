@@ -8,7 +8,7 @@ https://docs.djangoproject.com/
 
 ## Django 프로젝트 만들기
 
-### 1. startproject
+#### 1. startproject
 
 ```
 $ django-admin startproject mysite
@@ -32,7 +32,7 @@ $ django-admin startproject mysite
 * ```mysite/wsgi.py```: 프로젝트를 서비스하기 위한 WSGI 호환 웹 서버의 진입점
 
 
-### 2. runserver
+#### 2. runserver
 
 ```
 $ python3 manage.py runserver
@@ -84,9 +84,9 @@ $ source .bashrc
 * 참조 : https://ossian.tistory.com/109
 
 
-### 3. Creating the Polls app
+#### 3. Creating the Polls app
 
-#### 1. Polls 프로젝트 
+#### 1) Polls 프로젝트 
 
 ```
 $ python3 manage.py startapp polls
@@ -95,7 +95,7 @@ $ python3 manage.py startapp polls
 ![image](https://user-images.githubusercontent.com/56064985/148711093-196efb09-ba03-49a7-825b-696e0ce2c7b0.png)
 
 
-#### 2. View 작성
+#### 2) View 작성
 
 ```
 $ vi ~/mysite/polls/views.py
@@ -112,7 +112,7 @@ def index(request):
 ![image](https://user-images.githubusercontent.com/56064985/148711630-3983b8b2-dfaa-45c4-bb69-0cd7c4cbfddf.png)
 
 
-#### 3. urls.py 생성
+#### 3) urls.py 생성
 
 View를 호출하려면, URL 매핑이 되어야 하며, 이를 위해서는 URLconf가 필요합니다.
 
@@ -135,7 +135,7 @@ urlpatterns = [
 ![image](https://user-images.githubusercontent.com/56064985/148720186-d29dd6d5-1648-4424-8b45-ba095e611737.png)
 
 
-#### 4. polls.urls 생성
+#### 4) polls.urls 생성
 
  polls.urls 모듈에서 루트 URLconf를 지정해야 합니다. 이에, mysite/urls.py 을 생성합니다.
 
