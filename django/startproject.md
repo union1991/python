@@ -186,5 +186,4 @@ $ python3 ~/mysite/manage.py runserver 0.0.0.0:8000
 
 #### 3) Access Web App
 
-![image](https://user-images.githubusercontent.com/56064985/148720681-c0827827-9035-4eb7-aa45-86381dfbe154.png)
-
+![image](https://user-images.githubusercontent.com/56064985/148721236-4a57c52f-b07c-48db-a360-2288f0ddcad6.png)
