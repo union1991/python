@@ -86,6 +86,8 @@ $ source .bashrc
 
 #### 3. Creating the Polls app
 
+* Polls 프로젝트 
+
 ```
 $ python3 manage.py startapp polls
 ```
