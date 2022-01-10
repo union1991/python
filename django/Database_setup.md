@@ -8,6 +8,53 @@ ENGINE – Either 'django.db.backends.sqlite3',
 'django.db.backends.oracle'. Other backends are also available.
 ```
 
-* SQLite 사용 시 : BASE_DIR / 'db.sqlite3' 에서 설정을 확인할 수 있습니다.
+* ```SQLite 사용 시``` : BASE_DIR / 'db.sqlite3' 에서 설정을 확인할 수 있습니다.
 
-* 타 데이터베이스 사용 시 : Host에 별도의 User, PASSWORD 및 추가 설정이 필요합니다. 
+* ```타 데이터베이스 사용 시``` : Host에 별도의 User, PASSWORD 및 추가 설정이 필요합니다. 
+
+
+#### 1. Database 테이블 생성
+
+migrate명령은 INSTALLED_APPS설정을 살펴보고 mysite/settings.py파일 의 데이터베이스 설정 과 앱과 함께 제공되는 데이터베이스 마이그레이션에 따라 필요한 Database 테이블을 생성합니다 
+
+```
+$ python3 manage.py migrate
+```
+
+![image](https://user-images.githubusercontent.com/56064985/148726508-af911334-a3b6-4fdc-aeaa-2446fafddb83.png)
+
+
+#### 2. Model 생성
+
+추가 메타데이터를 사용하여 기본적으로 데이터베이스 레이아웃인 모델을 정의합니다.
+
+설문조사 앱에서 ```Question``` 및 ```Choice```의 두 가지 모델을 만듭니다. ```Question```에게 질문과 발행일을, ```Choice```에는 선택 텍스트와 투표 집계라는 두 개의 필드가 있습니다. 
+
+```
+$ vi ~/mysite/polls/models.py
+
+from django.db import models
+
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+    
+:wq!
+```
+
+![image](https://user-images.githubusercontent.com/56064985/148727597-85e2fb36-a050-4aba-b14e-324f65e400ec.png)
+
+
+
+#### 3. Model 활성화
+
+
+
+
