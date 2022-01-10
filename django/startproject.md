@@ -92,6 +92,9 @@ $ python3 manage.py startapp polls
 
 ![image](https://user-images.githubusercontent.com/56064985/148711093-196efb09-ba03-49a7-825b-696e0ce2c7b0.png)
 
+
+* View 작성
+
 ```
 $ vi ~/mysite/polls/views.py
 
@@ -107,7 +110,24 @@ def index(request):
 ![image](https://user-images.githubusercontent.com/56064985/148711630-3983b8b2-dfaa-45c4-bb69-0cd7c4cbfddf.png)
 
 
+* urls.py 생성
 
+View를 호출하려면, URL 매핑이 되어야 하며, 이를 위해서는 URLconf가 필요합니다.
 
+polls 디렉토리에 URLconf를 생성하려면 urls.py를 생성해야 합니다.
+
+```
+$ vi ~/mysite/polls/urls.py
+
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+
+:wq!
+```
 
 
