@@ -187,3 +187,23 @@ $ python3 ~/mysite/manage.py runserver 0.0.0.0:8000
 #### 3) Access Web App
 
 ![image](https://user-images.githubusercontent.com/56064985/148721236-4a57c52f-b07c-48db-a360-2288f0ddcad6.png)
+
+
+
+#### 5. Activating models
+
+
+```
+$ python manage.py makemigrations polls
+```
+
+
+
+
+
+```
+$ python manage.py migrate
+```
+
+![image](https://user-images.githubusercontent.com/56064985/148744327-774320bf-c8bc-42c5-b04c-4c9c6dc931cb.png)
+
