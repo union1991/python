@@ -152,3 +152,39 @@ urlpatterns = [
 ```
 
 ![image](https://user-images.githubusercontent.com/56064985/148720204-bfdd0941-47a8-4217-9261-6db09c67cbfd.png)
+
+
+#### 4. Access to APP
+
+#### 1) Allowed Hosts 설정
+
+해당 웹에는 허가된 Host만 접근이 가능합니다. 따라서, ```~/mysite/mysite/settings.py``` 파일에 Allowed Hosts에 접근 허용할 Host의 IP를 설정합니다.
+
+```
+$ vi ~/mysite/mysite/settings.py
+
+STATIC_URL = '/static/'
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+ALLOWED_HOSTS = ['X.X.X.X','localhost','127.0.0.1', 'X.X.X.X']         // 삽입
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+:wq!
+```
+
+#### 2) Runserer
+
+```
+$ python3 ~/mysite/manage.py runserver 0.0.0.0:8000
+```
+
+![image](https://user-images.githubusercontent.com/56064985/148721194-ee3df84a-0c4f-486a-997d-cbaf60f72c16.png)
+
+
+#### 3) Access Web App
+
+![image](https://user-images.githubusercontent.com/56064985/148720681-c0827827-9035-4eb7-aa45-86381dfbe154.png)
+
