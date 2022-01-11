@@ -157,11 +157,11 @@ class Choice(models.Model):
 # 삽입
     def __str__(self):
         return self.choice_text
-~
 
+:wq!
 ```
 
-
 ![image](https://user-images.githubusercontent.com/56064985/148891856-dfece4f9-0285-45f7-92c5-630afd11a9f0.png)
+
 
 
