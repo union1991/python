@@ -74,7 +74,7 @@ ALLOWED_HOSTS = ['172.16.100.48','localhost','127.0.0.1', '172.16.101.185']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-// 삽입
+# 삽입
 INSTALLED_APPS = [                                           
     'polls.apps.PollsConfig',
     'django.contrib.admin',
@@ -88,12 +88,80 @@ INSTALLED_APPS = [
 :wq!
 ```
 
-#### 1) polls 포함 확인
+#### 2) polls 포함 확인
 
 ```
 $ python3 manage.py makemigrations polls
 ```
 
 ![image](https://user-images.githubusercontent.com/56064985/148728880-e0d33e8c-e798-421a-bd17-c190d3931694.png)
+
+
+
+#### 3) 마이그레이션  실행(데이터베이스 스키마 동기화)
+
+```
+$ python3 manage.py migrate
+```
+
+
+[변경 사항이 없을 경우는 하기의 이미지와 같습니다.]
+
+![image](https://user-images.githubusercontent.com/56064985/148888976-92911a77-22c7-4223-aebf-1fc5d4e2dca4.png)
+
+
+
+#### 3. Playing with the API
+
+쉘 진입 후, Database API를 확인 할 수 있습니다.
+
+```
+$ python3 manage.py shell
+
+>>> from polls.models import Choice, Question  # Import the model classes we just wrote.
+>>> from django.utils import timezone
+>>> q = Question(question_text="What's new?", pub_date=timezone.now())
+>>> q.save()
+>>> q.id
+>>> q.question_text
+>>> q.pub_date
+>>> q.question_text = "What's up?"
+>>> q.save()
+>>> Question.objects.all()
+```
+
+
+
+#### 1) polls/models.py 수정
+
+```
+$ vi ~/mysite/mysite/polls/models.py
+
+from django.db import models
+
+# Create your models here.
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+# 삽입
+    def __str__(self):
+        return self.question_text
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    chice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+
+
+# 삽입
+    def __str__(self):
+        return self.choice_text
+~
+
+```
+
+
+![image](https://user-images.githubusercontent.com/56064985/148891856-dfece4f9-0285-45f7-92c5-630afd11a9f0.png)
 
 
