@@ -235,7 +235,33 @@ True
 # Let's delete one of the choices. Use delete() for that.
 >>> c = q.choice_set.filter(choice_text__startswith='Just hacking')
 >>> c.delete()
+```
 
+#### 4. Django 관리자
+
+
+#### 1) 관리자 생성
+
+관리 사이트에 로그인 할 수 있는 사용자를 생성해 봅시다. 
+
+```
+# 계정 생성
+$ python manage.py createsuperuser
+
+Username : admin
+Email address: admin@example.com
+Password: **********
+Password (again): *********
+Superuser created successfully.
+```
+
+![image](https://user-images.githubusercontent.com/56064985/149689321-6304d82b-d907-4b30-92bc-f91585fe7a5d.png)
+
+
+#### 2) 서버 구동
+
+```
+$ python3 manage.py runserver 172.16.101.185:8000
 ```
 
 
@@ -243,3 +269,16 @@ True
 
 
 
+
+
+
+
+
+
+
+
+### 업그레이드
+
+```
+$ sudo yum install gcc openssl-devel bzip2-devel libffi-devel
+```
