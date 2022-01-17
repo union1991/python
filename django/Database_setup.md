@@ -258,13 +258,31 @@ Superuser created successfully.
 ![image](https://user-images.githubusercontent.com/56064985/149689321-6304d82b-d907-4b30-92bc-f91585fe7a5d.png)
 
 
-#### 2) 서버 구동
+#### 2) Poll App 구성
+
 
 ```
-$ python3 manage.py runserver 172.16.101.185:8000
+$ vi ~/mysite/mysite/polls/admin.py
+
+from django.contrib import admin
+
+from .models import Question
+
+admin.site.register(Question)
+
+
+:wq!
+```
+
+#### 3) 서버 구동
+
+
+```
+$ python3 manage.py runserver 0.0.0.0:8000
 ```
 
 
+![image](https://user-images.githubusercontent.com/56064985/149707890-72a3b9cb-ceea-4a26-8633-02fa4c231174.png)
 
 
 
@@ -274,11 +292,3 @@ $ python3 manage.py runserver 172.16.101.185:8000
 
 
 
-
-
-
-### 업그레이드
-
-```
-$ sudo yum install gcc openssl-devel bzip2-devel libffi-devel
-```
